@@ -88,6 +88,14 @@
   ::selection{background:var(--accent);color:#fff}
   .wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
   @media(max-width:560px){.wrap{width:calc(100% - 2rem)}}
+  /* Laptop/desktop only: the whole layout reads ~8% bigger — the root
+     font-size bump scales every rem (base type, spacing, component sizes)
+     and the content container widens by the same proportion. Below this
+     breakpoint (tablets and phones) the layout is exactly as before. */
+  @media(min-width:1025px){
+    html{font-size:108%}
+    .wrap{width:min(1275px,100% - 2.5rem)}
+  }
 
   /* ---------- SPLASH (reference-style intro, holds ~1.9s) ---------- */
   body.loading{overflow:hidden}
@@ -645,7 +653,7 @@
               <h3>Aqdas, in short</h3>
               <ul>
                 <li><b>WordPress &amp; Frontend Developer</b> — 1+ year of professional experience</li>
-                <li><b>BS IT</b> — CGPA 3.46 / 4.00</li>
+                <li><b>BS IT</b> — graduated 2026</li>
                 <li><b>4 gigs live</b> on Fiverr</li>
                 <li>Based in <b>Vehari, Punjab</b> — working worldwide</li>
               </ul>
@@ -679,7 +687,7 @@
           <h3>Hello<span>!</span></h3>
           <p>I'm Muhammad Aqdas, a <strong>Frontend &amp; WordPress Developer</strong> based in Vehari, Punjab, focused on building fast, reliable, and visually sharp web experiences. On the frontend side, I work with <strong>HTML5, CSS3, JavaScript, and React</strong> to turn designs into clean, accessible, mobile-first interfaces with pixel-perfect control.</p>
           <p>On the WordPress side, I build custom <strong>Elementor Pro</strong> websites and <strong>WooCommerce</strong> stores, handle <strong>cPanel</strong> hosting, and optimize <strong>Core Web Vitals</strong> to squeeze real speed out of every page—laptop and mobile <strong>PageSpeed</strong> scores included. Whether you need a custom-coded frontend, a business site, an online store, or a speed overhaul, I take projects smoothly from brief to launch.</p>
-          <p>Currently, I work as a WordPress Developer for business clients at <strong>TechLape</strong> alongside taking on freelance projects. I hold a <strong>BS in Information Technology (CGPA 3.46/4.00)</strong>, where I built a full-stack <strong>Logistics Management System</strong> (<strong>Laravel 12, React 18, Inertia.js, Tailwind CSS, and MySQL</strong>) featuring role-based access, real-time dashboards, and a complete delivery workflow.</p>
+          <p>Currently, I work as a WordPress Developer for business clients at <strong>TechLape</strong> alongside taking on freelance projects. I hold a <strong>BS in Information Technology</strong>, where I built a full-stack <strong>Logistics Management System</strong> (<strong>Laravel 12, React 18, Inertia.js, Tailwind CSS, and MySQL</strong>) featuring role-based access, real-time dashboards, and a complete delivery workflow.</p>
         </div>
       </div>
     </div>
@@ -1010,7 +1018,7 @@
           <div class="av-chips">
             <span class="av-chip">Based in Vehari, Punjab</span>
             <span class="av-chip">1+ year of professional experience</span>
-            <span class="av-chip">BS IT · CGPA 3.46 / 4.00</span>
+            <span class="av-chip">BS IT · Graduated 2026</span>
             <span class="av-chip">4 gigs live on Fiverr</span>
           </div>
         </div>
@@ -1031,7 +1039,7 @@
       <div class="av-prose reveal">
         <p class="lead-p">I'm Muhammad Aqdas, a <strong>Frontend &amp; WordPress Developer</strong> based in Vehari, Punjab, focused on building fast, reliable, and visually sharp web experiences. On the frontend side, I work with <strong>HTML5, CSS3, JavaScript, and React</strong> to turn designs into clean, accessible, mobile-first interfaces with pixel-perfect control.</p>
         <p>On the WordPress side, I build custom <strong>Elementor Pro</strong> websites and <strong>WooCommerce</strong> stores, handle <strong>cPanel</strong> hosting, and optimize <strong>Core Web Vitals</strong> to squeeze real speed out of every page—laptop and mobile <strong>PageSpeed</strong> scores included. Whether you need a custom-coded frontend, a business site, an online store, or a speed overhaul, I take projects smoothly from brief to launch.</p>
-        <p>Currently, I work as a WordPress Developer for business clients at <strong>TechLape</strong> alongside taking on freelance projects. I hold a <strong>BS in Information Technology (CGPA 3.46/4.00)</strong>, where I built a full-stack <strong>Logistics Management System</strong> (<strong>Laravel 12, React 18, Inertia.js, Tailwind CSS, and MySQL</strong>) featuring role-based access, real-time dashboards, and a complete delivery workflow.</p>
+        <p>Currently, I work as a WordPress Developer for business clients at <strong>TechLape</strong> alongside taking on freelance projects. I hold a <strong>BS in Information Technology</strong>, where I built a full-stack <strong>Logistics Management System</strong> (<strong>Laravel 12, React 18, Inertia.js, Tailwind CSS, and MySQL</strong>) featuring role-based access, real-time dashboards, and a complete delivery workflow.</p>
       </div>
     </div>
   </section>
@@ -1107,9 +1115,9 @@
       <div class="av-edu">
         <article class="av-edu-card reveal">
           <div class="av-do-tag">Degree</div>
-          <div class="av-stat">3.46<span>/ 4.00</span></div>
+          <div class="av-stat">2026<span>graduated</span></div>
           <h3>BS in Information Technology</h3>
-          <p>Graduated with a CGPA of 3.46 / 4.00 — the degree behind the full-stack work in my portfolio.</p>
+          <p>University of Education, Lahore · 2022–2026 — the degree behind the full-stack work in my portfolio.</p>
         </article>
         <article class="av-edu-card reveal">
           <div class="av-do-tag">Final Year Project</div>
