@@ -151,7 +151,7 @@
   .mobile-menu{display:none}
   @media(max-width:760px){
     .nav-inner{gap:.5rem}
-    .logo{font-size:1.08rem;white-space:nowrap}
+    .logo{font-size:calc(1.08rem + 1px);white-space:nowrap}
     nav.links{gap:.45rem;flex-wrap:nowrap}
     nav.links a{display:none}
     .theme-toggle{width:38px;height:38px;min-height:38px}
@@ -503,11 +503,20 @@
     .filter-row.tabs-scroll{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding-bottom:.3rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
     .filter-row.tabs-scroll::-webkit-scrollbar{display:none}
     .filter-row.tabs-scroll .fbtn{flex:none;white-space:nowrap}
+    /* Theme toggle matches the hamburger's 38px box exactly (this block
+       sits after the base .theme-toggle rule, so it wins on mobile). */
+    .theme-toggle{width:38px;height:38px;min-height:38px}
   }
   @media(max-width:640px){
-    .hero .pill-row{flex-wrap:nowrap;gap:.45rem}
-    .hero .pill{padding:.55rem .62rem;font-size:.74rem;min-height:2.55rem;white-space:nowrap;gap:.35rem}
+    .hero .pill-row{flex-wrap:nowrap;gap:.5rem}
+    .hero .pill{flex:1 1 auto;justify-content:center;padding:.68rem .5rem;font-size:.8rem;min-height:2.8rem;white-space:nowrap;gap:.35rem}
     .hero .pill .arr{width:1.05em}
+  }
+  /* Hero TV: the orange offset shadow eats 8px of the right-hand gap, so
+     the frame is narrowed by that much on phones — the visible gap then
+     matches the left side and the shadow no longer reaches the edge. */
+  @media(max-width:560px){
+    .tv-wrap{width:calc(100% - 8px);margin-left:0;margin-right:auto}
   }
   @media(max-width:380px){
     .hero .pill{padding:.5rem .5rem;font-size:.7rem}
@@ -736,7 +745,7 @@
       <div class="kicker reveal">My Stack</div>
       <h2 class="title reveal">Skills &amp; Tools<span class="o">.</span></h2>
       <p class="sub reveal">The tools I actually build with every week — frontend first, WordPress right behind it, with a full-stack toolkit behind them. Filter by area to explore.</p>
-      <div class="filter-row reveal" role="group" aria-label="Filter skills">
+      <div class="filter-row tabs-scroll reveal" role="group" aria-label="Filter skills">
         <button class="fbtn active" data-filter="all" type="button">All Skills</button>
         <button class="fbtn" data-filter="frontend" type="button">Frontend</button>
         <button class="fbtn" data-filter="wordpress" type="button">WordPress</button>
